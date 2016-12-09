@@ -2,31 +2,49 @@
 'use strict';
 const meow = require('meow');
 const getStdin = require('get-stdin');
-const prettyBytes = require('pretty-bytes');
+const bytes = require('bytes');
+const isFinite = require('is-finite');
 
 const cli = meow(`
 	Usage
-	  $ pretty-bytes <number>
-	  $ echo <number> | pretty-bytes
+	  $ bytes <number>
+	  $ echo <number> | bytes
 
 	Example
-	  $ pretty-bytes 1337
+	  $ bytes 1337
 	  1.34 kB
 `);
 
-const input = cli.input[0];
+function getInput(input = '') {
+	const finite = Number(input);
 
-function init(input) {
-	console.log(prettyBytes(Number(input)));
+	if (isFinite(finite)) {
+		return {method: 'format', value: finite};
+	}
+
+	return {method: 'parse', value: String.prototype.trim.call(input)};
 }
 
-if (!input && process.stdin.isTTY) {
-	console.error('Specify a number');
+const input = getInput(cli.input[0]);
+
+function init(args) {
+	const {value, method} = args;
+
+	if (method === 'format') {
+		console.log(bytes.format(value));
+		return;
+	}
+
+	console.log(bytes.parse(value));
+}
+
+if (!input.value && process.stdin.isTTY) {
+	console.error('Specify a number or a string');
 	process.exit(1);
 }
 
-if (input) {
+if (input.value) {
 	init(input);
 } else {
-	getStdin().then(init);
+	getStdin().then(getInput).then(init);
 }

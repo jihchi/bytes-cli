@@ -1,4 +1,4 @@
-# pretty-bytes-cli [![Build Status](https://travis-ci.org/sindresorhus/pretty-bytes-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/pretty-bytes-cli)
+# bytes-cli [![Build Status](https://travis-ci.org/sindresorhus/bytes-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/bytes-cli)
 
 > Convert bytes to a human readable string: `1337` → `1.34 kB`
 
@@ -8,30 +8,30 @@ Useful for displaying file sizes for humans.
 ## Install
 
 ```
-$ npm install --global pretty-bytes-cli
+$ npm install --global bytes-cli
 ```
 
 
 ## Usage
 
 ```
-$ pretty-bytes --help
+$ bytes --help
 
   Usage
-    $ pretty-bytes <number>
-    $ echo <number> | pretty-bytes
+    $ bytes <number>
+    $ echo <number> | bytes
 
   Example
-    $ pretty-bytes 1337
+    $ bytes 1337
     1.34 kB
 ```
 
 
 ## Related
 
-- [pretty-bytes](https://github.com/sindresorhus/pretty-bytes) - API for this module
+- [bytes.js](https://github.com/visionmedia/bytes.js) - API for this module
 
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [Jih-Chi Lee](https://987.tw)
