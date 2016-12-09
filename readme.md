@@ -1,4 +1,4 @@
-# bytes-cli [![Build Status](https://travis-ci.org/sindresorhus/bytes-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/bytes-cli)
+# bytes-cli [![Build Status](https://travis-ci.org/jihchi/bytes-cli.svg?branch=master)](https://travis-ci.org/jihchi/bytes-cli)
 
 > Convert bytes to a human readable string: `1337` → `1.31kB`
 
