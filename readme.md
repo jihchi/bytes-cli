@@ -1,6 +1,6 @@
 # bytes-cli [![Build Status](https://travis-ci.org/sindresorhus/bytes-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/bytes-cli)
 
-> Convert bytes to a human readable string: `1337` → `1.34 kB`
+> Convert bytes to a human readable string: `1337` → `1.31kB`
 
 Useful for displaying file sizes for humans.
 
@@ -23,7 +23,11 @@ $ bytes --help
 
   Example
     $ bytes 1337
-    1.34 kB
+    1.31kB
+		
+	Example
+    $ bytes 1.31kB
+    1341
 ```
 
 
