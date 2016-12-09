@@ -29,7 +29,8 @@ function getInput(input) {
 const input = getInput(cli.input[0]);
 
 function init(args) {
-	const {value, method} = args;
+	const value = args.value;
+	const method = args.method;
 
 	if (method === 'format') {
 		console.log(bytes.format(value));
