@@ -25,7 +25,7 @@ $ bytes --help
     $ bytes 1337
     1.31kB
 		
-	Example
+  Example
     $ bytes 1.31kB
     1341
 ```
