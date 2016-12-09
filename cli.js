@@ -15,7 +15,8 @@ const cli = meow(`
 	  1.34 kB
 `);
 
-function getInput(input = '') {
+function getInput(input) {
+	input = input || '';
 	const finite = Number(input);
 
 	if (isFinite(finite)) {
