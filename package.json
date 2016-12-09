@@ -1,6 +1,6 @@
 {
   "name": "bytes-cli",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Convert bytes to a human readable string: 1337 → 1.34 kB",
   "license": "MIT",
   "repository": "jihchi/bytes-cli",
